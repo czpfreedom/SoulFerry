@@ -1,0 +1,53 @@
+{
+	"id":"1",
+	"name":"第一关",
+	"map":
+	{
+		"terrainblocks":
+		[
+			{
+				"coordinate":
+				{
+					"x":"0",
+					"y":"0",
+					"z":"0"	
+				},
+				
+				"terrain":
+				{
+					"name":"plain",
+					"options":
+					[
+						{
+							"name":"corpse",
+							"boolvalue":"false"
+						}
+					]
+				}
+			},
+			
+			{
+				"coordinate":
+				{
+					"x":"0",
+					"y":"0",
+					"z":"1"	
+				},
+				
+				"terrain":
+				{
+					"name":"plain",
+					"options":
+					[
+						{
+							"name":"corpse",
+							"boolvalue":"false"
+						}
+					]
+				}
+			}
+		]
+		
+	}
+	
+}
