@@ -17,8 +17,22 @@ public partial class ActiveAbilityMapper
         JObject obj = JObject.Parse(json);
 
         if (obj["id"] != null) {
-            int id = obj["id"].Value<int>();
-            GD.Print(id);
+            activeAbility.Id = obj["id"].Value<int>();
+        }
+
+        if (obj["name"] != null)
+        {
+            activeAbility.Name = obj["name"].Value<string>();
+        }
+
+        if (obj["castrange"] != null)
+        {
+            activeAbility.CastRange = obj["castrange"].Value <double>();
+        }
+
+        if (obj["basicdamage"] != null)
+        {
+            activeAbility.Basicdamage = obj["basicdamage"].Value<double>();
         }
 
         return activeAbility;

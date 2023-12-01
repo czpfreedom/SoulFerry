@@ -1,0 +1,10 @@
+{
+	"activeAbility" :
+	[
+		{
+			"name":"magic_arrow",
+			"castrange":"5",
+			"basicdamage":"10"
+		}
+	]
+}

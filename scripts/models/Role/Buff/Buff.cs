@@ -14,9 +14,15 @@ public partial class Buff
 
     private Dictionary<String,String> customPparameters ;
 
+    public int AttackerId { get => attackerId; set => attackerId = value; }
+    public double ATB1 { get => ATB; set => ATB = value; }
+    public Dictionary<string, string> CustomPparameters { get => customPparameters; set => customPparameters = value; }
+
     // Buff运行
     // 触发点
 
-
+    public Buff() {
+        customPparameters = new Dictionary<string, string>();
+    }
 
 }
