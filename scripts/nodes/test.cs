@@ -1,48 +1,41 @@
-using Godot;
-using Newtonsoft.Json.Linq;
+﻿using Godot;
 using System;
 
 using System.IO;
 using System.Collections.Generic;
+
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+using FileAcc = Godot.FileAccess;
 
 public partial class test : Node3D
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-        //string filename = "res://resources/stages/stage1.json";
+		string filename = "res://resources/stages/stage1.json";
+        var  fl = FileAcc.Open(filename, FileAcc.ModeFlags.Read);
+		string s = fl.GetAsText();
 
-        //string filename = "D:/godot/SoulFerry/resources/stages/stage1.json";
 
-        string filename = "D:/godot/SoulFerry/resources/abilities/activeAbility.json";
+        JObject jo = (JObject)JsonConvert.DeserializeObject(s);
+        string zone = jo["map"]["terrainblocks"].ToString();
 
-        StreamReader sr = new StreamReader(filename);
+        GD.Print(zone);
 
-        string json = sr.ReadToEnd();
 
-        JObject obj = JObject.Parse(json);
+        JArray jArray = (JArray)JsonConvert.DeserializeObject(zone);//jsonArrayText必须是带[]数组格式字符串
+        string str = jArray[0]["coordinate"].ToString();
 
-        if (obj["ids"] != null)
-        {
-            int id = obj["ids"].Value<int>();
-            GD.Print(id);
-        }
+        GD.Print(str);
 
-        if (obj["name"] != null)
-        {
-            string name = obj["name"].Value<string>();
-            GD.Print(name);
-        }
-        GD.Print(1);
-        if (obj["activeAbility"] != null) 
-        {
-            List<object> a = obj["activeAbility"].Value<List<object>>();
-            //GD.Print(obj["activeAbility"].Value<List<object>>());
-        }
+
+
     }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
 	{
 	}
 }

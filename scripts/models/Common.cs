@@ -3,6 +3,8 @@ using System;
 
 public partial class Common 
 {
+
+    public static string ROOTDIRECTORY = "D:/GodotProject/SoulFerry/";
     public enum Faction { OurFaction, FriendlyFaction, EnemyFaction }; // 我军 友军 敌军
 
     public enum FactionRight { AttackRight, HealRight, AcrossRight   }; // 攻击权 治疗权 跨越权
