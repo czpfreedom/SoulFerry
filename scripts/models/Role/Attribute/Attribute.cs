@@ -18,7 +18,7 @@ public partial class Attribute
 
     private double maxHP; // 生命值上限
 
-    // 蓝条没想清楚怎么算
+    private int maxTP; // 精力值
 
     private int strengthInt; // 力量
     private int armorInt; // 护甲，物防
@@ -54,4 +54,5 @@ public partial class Attribute
     public int SpeedInt { get => speedInt; set => speedInt = value; }
     public int MoveInt { get => moveInt; set => moveInt = value; }
     public int MaxHPInt { get => maxHPInt; set => maxHPInt = value; }
+    public int MaxTP { get => maxTP; set => maxTP = value; }
 }
