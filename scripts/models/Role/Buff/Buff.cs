@@ -16,7 +16,7 @@ public partial class Buff
     private Godot.Collections.Dictionary<String, String> customPparameters;    // 自定义记录参数
 
 
-    private Trigger trigger; // 触发条件
+    private List<Trigger> trigger; // 触发条件
 
     private List<ActionResult> actionResults;  // 触发结果
 
@@ -26,14 +26,15 @@ public partial class Buff
     public double ATB { get => aTB; set => aTB = value; }
     public Godot.Collections.Dictionary<string, string> CustomPparameters { get => customPparameters; set => customPparameters = value; }
     public List<string> Tag { get => tag; set => tag = value; }
-    public Trigger Trigger { get => trigger; set => trigger = value; }
+
     public List<ActionResult> ActionResults { get => actionResults; set => actionResults = value; }
     public string Name { get => name; set => name = value; }
+    public List<Trigger> Trigger { get => trigger; set => trigger = value; }
 
     public Buff() {
         Tag = new List<string>();
         customPparameters = new Godot.Collections.Dictionary<string, string>();
-        trigger = new Trigger();
+        Trigger = new List<Trigger>();
         actionResults = new List<ActionResult>(); 
     }
 
