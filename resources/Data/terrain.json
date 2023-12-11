@@ -1,0 +1,13 @@
+[
+	{
+		"id": "1",
+		"name": "plain",
+		"description": "平原",
+		"texturepath": "res://resources/Pictures/TerrainBlock/blockDirtHalf.png",
+		"terrainoptions":
+			[],
+		"mapAttribute":
+			[]
+	}
+	
+]

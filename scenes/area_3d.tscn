@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bicmhm7vtcx0k"]
+
+[ext_resource type="Texture2D" uid="uid://btyq1txn8kpk2" path="res://resources/Pictures/TerrainBlock/blockDirtHalf.png" id="1_fye5y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ojg2e"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fye5y")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6iv4i"]
+
+[node name="Area3D" type="Area3D"]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ojg2e")
+animation = &"new_animation"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_6iv4i")

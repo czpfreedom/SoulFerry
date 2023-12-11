@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://daben370xvidl"]
+
+[ext_resource type="Texture2D" uid="uid://btyq1txn8kpk2" path="res://resources/Pictures/TerrainBlock/blockDirtHalf.png" id="1_0vfb8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j76fy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0vfb8")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pe8cb"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(550, 315)
+sprite_frames = SubResource("SpriteFrames_j76fy")
+animation = &"new_animation"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pe8cb")

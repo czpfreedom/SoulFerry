@@ -1,4 +1,4 @@
-using Godot;
+锘縰sing Godot;
 using System;
 using System.Collections.Generic;
 
@@ -7,7 +7,7 @@ public partial class stage : Node2D
 	private List<Role> roles;
 	private List<TerrainBlock> terrainBlocks;
 
-	private Role presentRole; // 当前行动角色
+	private Role presentRole; // 褰撳墠琛屽姩瑙掕壊
 
 	private Common.FightStatus fightStatus;
 	// Called when the node enters the scene tree for the first time.
@@ -54,4 +54,5 @@ public partial class stage : Node2D
 			}
 		}
 	}
+
 }

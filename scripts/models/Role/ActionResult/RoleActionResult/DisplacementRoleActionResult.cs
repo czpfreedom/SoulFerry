@@ -1,4 +1,4 @@
-using Godot;
+ï»¿using Godot;
 using System;
 
 public partial class DisplacementRoleActionResult : RoleActionResult
@@ -13,7 +13,7 @@ public partial class DisplacementRoleActionResult : RoleActionResult
     public override void Excute(){
         if (displayMode == Common.DisplaymentMode.Absolute) { 
             Role.Coordinate = Coordinate;
-            string log = Role.Name + "ÒÆ¶¯µ½ÁË" + "";
+            string log = Role.Name + "ç§»åŠ¨åˆ°äº†" + "";
         }
         if (displayMode == Common.DisplaymentMode.Relative) {
             Role.Coordinate += Coordinate;
